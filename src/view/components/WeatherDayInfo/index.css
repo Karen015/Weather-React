@@ -1,0 +1,40 @@
+.ant_card {
+    background-color: rgba(255, 255, 255, 0.325);
+    border: 0;
+    backdrop-filter: blur(10px);
+    color: white;
+}
+.ant_button {
+    background-color: rgb(0, 200, 255);
+    border: 0;
+    color: white;
+}
+.ant_form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.main_section {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.363);
+    border-radius: 10px;
+}
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.flex_section {
+    padding: 0 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
