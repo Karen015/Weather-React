@@ -3,8 +3,9 @@
 }
 body {
   background-color: rgb(0, 179, 255);
-  /* background-image: url(https://img.pikbest.com/wp/202347/weather-forecast-app-3d-illustration-of-icons-depicting-sun-and-clouds-ideal-for-design-web-with-blue-background_9761677.jpg!sw800); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
+  height: auto;
 }

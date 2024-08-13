@@ -41,8 +41,8 @@ const WeatherDayInfo = () => {
     }, [countryInput])
    
     const fetchWithCountryName = () => {
-        
         const weather = `${API_URL}forecast?q=${countryInput.value}&appid=${API_KEY}&units=metric`;
+
         fetch(weather)
         .then(resp => {
             return resp.json()
@@ -61,7 +61,6 @@ const WeatherDayInfo = () => {
 
     return(
         <div className="main_section">
-            
             <Form 
                 className="ant_form"
                 onFinish={fetchWithCountryName}
@@ -102,16 +101,14 @@ const WeatherDayInfo = () => {
                 
             </Form>
             {/* <Title level={2}>{countryInput.value}</Title> */}
-            <Flex className="flex_section" align="center" justify="center" gap={"20px"} wrap style={{height: "100vh"}} >
-
+            <Flex className="flex_section" align="center" justify="center" gap={"20px"} wrap>
                 {
                     list.map((item, index) => {
                         const { dt_txt, main, weather, dt, } = item
                         if(index % 8 === 0) {
                             return (
-                                <Card className="ant_card" title={findWeatherDate(dt_txt)} style={{ width: 170 }} styles={{header: {color: "white"}}} key={dt} hoverable header={{color:"white"}}>
-                                    <p>Time:{dt_txt.slice(10, -3)}</p>
-                                    <p>{Math.ceil(main.temp)}C<sup>o</sup></p>
+                                <Card className="ant_card" title={findWeatherDate(dt_txt)} style={{ width: 170 }} styles={{header: {color: "white"}}} key={dt} hoverable>
+                                    <p>{Math.ceil(main.temp)} C<sup>o</sup></p>
                                     <p><img width="75" src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`} alt="icon"></img></p>
                                     <Title level={5} type="secondary">{weather[0].description}</Title>
                                 </Card>
@@ -121,9 +118,7 @@ const WeatherDayInfo = () => {
                     })
                 }
             </Flex>
-        </div>
-        
+        </div>   
     )
 }
-
 export default WeatherDayInfo
