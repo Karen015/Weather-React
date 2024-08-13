@@ -38,7 +38,7 @@ const WeatherDayInfo = () => {
     useEffect(() => {
         const input = document.getElementById('countryInput')
         setCountryInput(input)  
-    })
+    }, [countryInput])
    
     const fetchWithCountryName = () => {
         
